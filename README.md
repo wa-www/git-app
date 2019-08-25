@@ -10,3 +10,6 @@
 
 ##test100
 ##dedolt
+
+##tet200
+##hennkou2kaime
