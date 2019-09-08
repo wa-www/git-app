@@ -5,7 +5,6 @@
 |name|string|index: true, null: false, unique:true|
 |e-mail|string|null: false, unique: true|
 |password|string|null: false|
-|groups_users_id|integer|foreign_key: true|
 
 ### Association
 - has_many :groups_users
@@ -17,8 +16,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group-name|string|
-|groups_users_id|integer|foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :groups_users
@@ -32,8 +30,8 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|group_id|integer|foreign_key: true|
-|user_id|integer|foreign_key: true|
+|group_id|integer|foreign_key: true, null: false|
+|user_id|integer|foreign_key: true, null: false|
 
 ### Association
 - belongs_to :user
