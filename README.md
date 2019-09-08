@@ -2,7 +2,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|
+|name|string|index: true, null: false, unique:true|
 |e-mail|string|null: false, unique: true|
 |password|string|null: false|
 |groups_users_id|integer|foreign_key: true|
@@ -10,7 +10,7 @@
 ### Association
 - has_many :groups_users
 - has_many :messages
-- has_many :groups
+- has_many :groups, through: :groups_users
 
 
 ## groupsテーブル
@@ -23,7 +23,7 @@
 ### Association
 - has_many :groups_users
 - has_many :messages
-- has_many :users
+- has_many :users, through: :groups_users
 
 
 ## messagesテーブル
